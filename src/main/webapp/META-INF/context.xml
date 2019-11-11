@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Context path="/">
     <Resource
-            name="jdbc/db"
+            name="db.sqlite"
             auth="container"
             type="javax.sql.DataSource"
             driverClassName="org.sqlite.JDBC"
-            url="jdbc:sqlite::memory:"
+            url="jdbc:sqlite:db.sqlite"
             closeMethod="close"
     />
     <Resource
