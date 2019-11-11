@@ -17,7 +17,7 @@ public class ImageServlet extends HttpServlet {
     public void init() throws ServletException {
         try {
             var context = new InitialContext();
-            fileService = (FileService) context.lookup("java:/comp/env/bean.file-service");
+            fileService = (FileService) context.lookup("java:/comp/env/bean/file-service");
         } catch (NamingException e) {
             e.printStackTrace();
             throw new ServletException();

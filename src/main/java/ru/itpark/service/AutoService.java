@@ -15,7 +15,7 @@ public class AutoService {
 
     public AutoService() throws NamingException, SQLException {
         var context = new InitialContext();
-        ds = (DataSource) context.lookup("java/comp/env/jdbc/db");
+        ds = (DataSource) context.lookup("java:comp/env/jdbc/db");
         try (var conn = ds.getConnection()) {
             try (var stmt = conn.createStatement()) {
                 stmt.execute("CREATE TABLE IF NOT EXISTS autos (id TEXT PRIMARY KEY, name TEXT NOT NULL, description TEXT NOT NULL, image TEXT);");

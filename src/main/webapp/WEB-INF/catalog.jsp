@@ -22,12 +22,12 @@
             <% for (Auto item : (List<Auto>) request.getAttribute("items")) { %>
             <div class="col-sm-6 mt-3">
                 <div class="card">
-                    <img src="<%= request.getContextPath() %>/images/ <%= item.getImage()%>" class="card-img-top"
-                         alt="<%= item.getName()%>">
+                    <img src="<%=request.getContextPath()%>/images/<%=item.getImage()%>" class="card-img-top"
+                         alt="<%=item.getName()%>">
                     <div class="card-body">
                         <h5 class="card-title"><%=item.getName()%>
                         </h5>
-                        <p class="card-text"><%= item.getDescription()%>
+                        <p class="card-text"><%=item.getDescription()%>
                         </p>
                     </div>
                 </div>
@@ -37,7 +37,6 @@
             <% } %>
         </div>
 
-        <
         <form action="<%=request.getContextPath()%>" method="post" enctype="multipart/form-data" class="mt-3">
             <div class="form-group">
                 <label for="name">Auto Name</label>
@@ -47,10 +46,10 @@
                 <label for="description">Auto Description</label>
                 <textarea id="description" name="description" class="form-control" required></textarea>
             </div>
-            <dev class="custom-file">
+            <div class="custom-file">
                 <input type="file" id="file" name="image" class="custon-file-input" accept="image/*" required>
                 <<label class="custom-file-label" for="file">Choose image...</label>
-            </dev>
+            </div>
             <button type="submit" class="btn btn-primary mt-3">Create</button>
         </form>
     </div>
