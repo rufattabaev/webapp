@@ -17,7 +17,6 @@
 
     </div>
 </div>
-</div>
 <%@include file="bootstrap-scripts.jsp" %>
 
 </body>
