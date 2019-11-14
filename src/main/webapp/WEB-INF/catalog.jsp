@@ -14,7 +14,7 @@
 <body>
 <div class="container">
     <div class="row">
-        <div class="col"></div>
+        <div class="col">
         <h1>Catalog</h1>
         <div class="row">
             <% if (request.getAttribute("items") != null) {%>
@@ -49,6 +49,7 @@
             </div>
             <button type="submit" class="btn btn-primary mt-3">Create</button>
         </form>
+        </div>
     </div>
 </div>
 <%@include file="bootstrap-scripts.jsp" %>
