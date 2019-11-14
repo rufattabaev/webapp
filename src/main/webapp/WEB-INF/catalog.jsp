@@ -16,7 +16,6 @@
     <div class="row">
         <div class="col"></div>
         <h1>Catalog</h1>
-
         <div class="row">
             <% if (request.getAttribute("items") != null) {%>
             <% for (Auto item : (List<Auto>) request.getAttribute("items")) { %>
@@ -32,11 +31,9 @@
                     </div>
                 </div>
             </div>
-
             <% } %>
             <% } %>
         </div>
-
         <form action="<%=request.getContextPath()%>" method="post" enctype="multipart/form-data" class="mt-3">
             <div class="form-group">
                 <label for="name">Auto Name</label>
